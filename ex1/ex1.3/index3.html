@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function parseCookieHeader(header) {
+      
+            var pairs = header.split(';');
+   
+            var cookies = {};
+
+            for (var i = 0; i < pairs.length; i++) {
+                 var nameValue = pairs[i].split('=');
+                cookies[nameValue[0].trim()] = nameValue[1];
+            }
+   
+            return cookies;
+        }
+
+        var header = "username=TuanAnh123; expires=TuanAnhAhihi ; path=/;"
+
+        var cookies = parseCookieHeader(header);
+
+        console.log(cookies)
+        document.getElementById("result").innerHTML = JSON.stringify(cookies)
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="click-me" onclick="updateButton()">Click here to change button text</div>
+    <form action="/action_page.php" method="get" id="form1">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="fname" name="firstname">
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lname" name="lastname">
+    </form>
+
+    <button id="button1" type="submit" form="form1" value="Submit">Send</button>
+
+    <script>
+
+        function updateButton() {
+            document.getElementById("button1").textContent="Submit";
+        };
+
+    </script>
+
+</body>
+</html>

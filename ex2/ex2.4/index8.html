@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+
+        var month_diff = Date.now()   
+          
+        var age_dt = new Date(month_diff);   
+          
+        var year = age_dt.getUTCFullYear();  
+          
+        var age = Math.abs(year - 2002);  
+          
+        document.write("Age of the date entered: " + age + " years");  
+    </script>  
+</body>
+</html>
